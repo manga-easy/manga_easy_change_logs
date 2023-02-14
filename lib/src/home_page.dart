@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 const Text(
@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   height: 10,
                 ),
-                ContainerTitulo(
+                const ContainerTitulo(
                     color: Color.fromARGB(255, 75, 33, 224),
                     text: 'Adicionado'),
                 const SizedBox(
@@ -62,9 +62,8 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   height: 10,
                 ),
-                ContainerTitulo(
-                    color: const Color.fromARGB(255, 3, 175, 40),
-                    text: 'Melhorias'),
+                const ContainerTitulo(
+                    color: Color.fromARGB(255, 3, 175, 40), text: 'Melhorias'),
                 const SizedBox(
                   height: 10,
                 ),
@@ -72,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   height: 10,
                 ),
-                ContainerTitulo(color: Colors.red, text: 'Correções'),
+                const ContainerTitulo(color: Colors.red, text: 'Correções'),
                 const SizedBox(
                   height: 10,
                 ),

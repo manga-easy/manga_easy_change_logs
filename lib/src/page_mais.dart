@@ -1,3 +1,5 @@
+import 'package:change_logs/change_logs.dart';
+import 'package:change_logs/src/container_titulo.dart';
 import 'package:flutter/material.dart';
 
 class PageMais extends StatefulWidget {
@@ -14,82 +16,102 @@ class _PageMaisState extends State<PageMais> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+          bottomNavigationBar: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              minimumSize: const Size(
+                350.0,
+                50.0,
+              ),
+              backgroundColor: Colors.red,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(50),
+              ),
+            ),
+            onPressed: (() {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: ((context) => const HomePage()),
+                ),
+              );
+            }),
+            child: const Text('Ok'),
+          ),
           body: Padding(
-        padding: const EdgeInsets.only(top: 20, left: 30, right: 30),
-        child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Container(
-            child: Text('ontem'),
-          ),
-          SizedBox(
-            width: 20,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            padding: const EdgeInsets.only(top: 20, left: 30, right: 30),
+            child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Container(
-                alignment: Alignment.center,
-                width: 85,
-                height: 20,
-                decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 75, 33, 224),
-                    borderRadius: BorderRadius.circular(5)),
-                child: Text(
-                  'Adicionado',
-                ),
+                child: const Text('ontem'),
               ),
-              SizedBox(
-                height: 10,
+              const SizedBox(
+                width: 20,
               ),
-              Text('recuperação de senha'),
-              Text('tela de preferencias'),
-              Text('tela de introdução'),
-              SizedBox(
-                height: 10,
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ContainerTitulo(
+                      color: const Color.fromARGB(255, 75, 33, 224),
+                      text: 'Adicionado'),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 10,
+                    ),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text('● recuperação de senha'),
+                          Text('● tela de preferencias'),
+                          Text('● tela de introdução'),
+                        ]),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  ContainerTitulo(
+                      color: Color.fromARGB(255, 3, 175, 40),
+                      text: 'Melhorias'),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 10,
+                    ),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                              '● Melhoria no loading de historico e bibioteca'),
+                        ]),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  ContainerTitulo(color: Colors.red, text: 'Correções'),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 10,
+                    ),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text('● recuperação de senha'),
+                          Text('● tela de preferencias'),
+                          Text('● tela de introdução'),
+                        ]),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                ],
               ),
-              Container(
-                alignment: Alignment.center,
-                width: 75,
-                height: 20,
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 3, 175, 40),
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: Text(
-                  'Melhorias',
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text('Melhoria no loading de historico e bibioteca'),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.red,
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                alignment: Alignment.center,
-                width: 85,
-                height: 20,
-                child: Text(
-                  'Correções',
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text('recuperação de senha'),
-              Text('tela de preferencias'),
-              Text('tela de introdução'),
-              SizedBox(
-                height: 20,
-              ),
-            ],
-          ),
-        ]),
-      )),
+            ]),
+          )),
     );
   }
 }

@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 const Text(
@@ -51,24 +51,41 @@ class _HomePageState extends State<HomePage> {
                   height: 10,
                 ),
                 ContainerTitulo(
-                    color: Color.fromARGB(255, 75, 33, 224),
+                    color: const Color.fromARGB(255, 75, 33, 224),
                     text: 'Adicionado'),
                 const SizedBox(
                   height: 10,
                 ),
-                const Text('● recuperação de senha'),
-                const Text('● tela de preferencias'),
-                const Text('● tela de introdução'),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 10,
+                  ),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text('● recuperação de senha'),
+                        Text('● tela de preferencias'),
+                        Text('● tela de introdução'),
+                      ]),
+                ),
                 const SizedBox(
                   height: 10,
                 ),
                 ContainerTitulo(
-                    color: const Color.fromARGB(255, 3, 175, 40),
-                    text: 'Melhorias'),
+                    color: Color.fromARGB(255, 3, 175, 40), text: 'Melhorias'),
                 const SizedBox(
                   height: 10,
                 ),
-                const Text('● Melhoria no loading de historico e bibioteca'),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 10,
+                  ),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text('● Melhoria no loading de historico e bibioteca'),
+                      ]),
+                ),
                 const SizedBox(
                   height: 10,
                 ),
@@ -76,26 +93,34 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   height: 10,
                 ),
-                const Text('● recuperação de senha'),
-                const Text('● tela de preferencias'),
-                const Text('● tela de introdução'),
-                const SizedBox(
-                  height: 10,
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 10,
+                  ),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text('● recuperação de senha'),
+                        Text('● tela de preferencias'),
+                        Text('● tela de introdução'),
+                      ]),
                 ),
-                TextButton(
-                  onPressed: (() {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: ((context) => PageMais()),
-                      ),
-                    );
-                  }),
-                  child: const Text(
-                    'Ver todas as notas ',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 19,
-                        color: Colors.red),
+                Center(
+                  child: TextButton(
+                    onPressed: (() {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: ((context) => PageMais()),
+                        ),
+                      );
+                    }),
+                    child: const Text(
+                      'Ver todas as notas ',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 19,
+                          color: Colors.red),
+                    ),
                   ),
                 ),
                 ElevatedButton(
